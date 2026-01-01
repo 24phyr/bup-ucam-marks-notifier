@@ -18,7 +18,7 @@ This Userscript is designed for students of **Bangladesh University of Professio
     * The script effectively simulates your total result based on your prediction, allowing you to plan ahead before the official marks are even uploaded.
 
 #### How to Use
-1.  Install Tempermonkey extension in your browser and install the script from here https://greasyfork.org/en/scripts/561046-bup-ucam-playground
+1.  Install **`Tempermonkey`** extension in your browser and install the script from here https://greasyfork.org/en/scripts/561046-bup-ucam-playground
 2.  Go to your BUP UCAM Exam Mark Summary page.
 3.  Select your session and view a course.
 4.  Scroll to the bottom of the marks table to see your **Total Obtained**.
