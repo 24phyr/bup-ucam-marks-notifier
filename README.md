@@ -35,3 +35,4 @@ pip install -r requirements.txt
 * [What exactly do "u" and "r" string prefixes do, and what are raw string literals?](https://stackoverflow.com/questions/2081640/what-exactly-do-u-and-r-string-prefixes-do-and-what-are-raw-string-literals)
 * [Python - find greatest 2 of 3 numbers WITHOUT using max()](https://stackoverflow.com/questions/9450867/python-find-greatest-2-of-3-numbers-without-using-max)
 * [How do I parse a string to a float or int?](https://stackoverflow.com/questions/379906/how-do-i-parse-a-string-to-a-float-or-int)
+* [Python compare md5 hash](https://stackoverflow.com/questions/39519734/python-compare-md5-hash)
