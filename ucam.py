@@ -4,9 +4,12 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from plyer import notification
 import json
 import os
 import time
+import hashlib
+import zlib
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -38,6 +41,7 @@ print("BUP UCAM Automation")
 
 browser = webdriver.Firefox()
 browser.get('https://ucam.bup.edu.bd/')
+
 
 print("Logging In...")
 
@@ -123,3 +127,18 @@ while True:
         with open("output2.json", "w") as outfile:
             json.dump(course_data, outfile, indent=4)
     i += 1
+        
+    if os.path.exists('output1.json') and os.path.exists('output2.json'):
+        with open("output1.json", "rb") as fh:
+            data = fh.read()
+            outputA = zlib.crc32(data) & 0xffffffff
+        with open("output2.json", "rb") as fh:
+            data = fh.read()
+            outputB = zlib.crc32(data) & 0xffffffff
+
+        outputA_Hash = format(outputA, "08X")
+        outputB_Hash = format(outputB, "08X")
+
+        if outputA_Hash != outputB_Hash:
+            print("Marks Updated")
+            notification.notify(title='BUP UCAM Marks Updated', message='Your grades have been updated!', app_name='BUP UCAM Notifier', timeout=10)
